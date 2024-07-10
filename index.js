@@ -24,7 +24,7 @@ app.post('/send-email', (req, res) => {
 
     const mailOptions = {
         from: 'igx.consulting.no.replay@gmail.com',
-        to: 'vlad751392@gmail.com',
+        to: 'support@lgxconsulting.com',
         subject: 'New Request',
         html: `
             <div style="background: aliceblue; padding: 40px;">
