@@ -19,38 +19,38 @@ const transporter = nodemailer.createTransport({
 app.post('/send-email', (req, res) => {
     console.log(req.body);
     const { firstName, lastName, email, phone, companyWebsite, monthlyShippingVolume, averageShippingWeight } = req.body;
-
+    console.log( firstName, lastName, email, phone, companyWebsite, monthlyShippingVolume, averageShippingWeight);
     
 
     const mailOptions = {
         from: 'igx.consulting.no.replay@gmail.com',
-        to: 'vladislav.shtil@4k.com.ua',
+        to: 'support@lgxconsulting.com',
         subject: 'New Request',
         html: `
             <div style="background: aliceblue; padding: 40px;">
             <h2 class="font-size:32px">New request</h2>
             <table border="1" style="border-color:#837c7a;" cellpadding="10" cellspacing="0">
-                <tr style="border-color:#837c7a;>
+                <tr style="border-color:#837c7a;">
                     <th>Name</th>
                     <td>${firstName} ${lastName}</td>
                 </tr>
-                <tr style="border-color:#837c7a;>
+                <tr style="border-color:#837c7a;">
                     <th>Email</th>
                     <td>${email}</td>
                 </tr>
-                <tr style="border-color:#837c7a;>
+                <tr style="border-color:#837c7a;">
                     <th>Phone</th>
                     <td>${phone}</td>
                 </tr>
-                <tr style="border-color:#837c7a;>
+                <tr style="border-color:#837c7a;">
                     <th>Company Website</th>
                     <td>${companyWebsite}</td>
                 </tr>
-                <tr style="border-color:#837c7a;>
+                <tr style="border-color:#837c7a;">
                     <th>Monthly Shipping Volume</th>
                     <td>${monthlyShippingVolume}</td>
                 </tr>
-                <tr style="border-color:#837c7a;>
+                <tr style="border-color:#837c7a;">
                     <th>Average Shipping Weight</th>
                     <td>${averageShippingWeight}</td>
                 </tr>
